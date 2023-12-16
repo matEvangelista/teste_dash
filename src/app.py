@@ -18,7 +18,8 @@ eixo_y = None
 
 app = Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
 
-app.layout = dbc.Container(children=[
+app.layout = html.Div(
+    dbc.Container(children=[
     html.H1(children='Primeiro teste com Dash'),
 
     html.H1(id='selected-dropdown-value'),
@@ -60,7 +61,7 @@ app.layout = dbc.Container(children=[
     )
 
 
-])
+]))
 
 # Callback to update the H1 element based on the selected value in the dropdown
 @app.callback(
